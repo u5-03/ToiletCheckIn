@@ -7,6 +7,31 @@
 
 import WidgetKit
 import SwiftUI
+import ToiletCheckInCore
+import AppIntents
+
+struct ToiletSmallIntent: AppIntent {
+    static var title: LocalizedStringResource = "Small"
+
+    func perform() async throws -> some IntentResult {
+        let item = ToiletResultItem(toiletType: .small, date: Date(), deviceType: .widget)
+        let key = Date().asString(withFormat: .dateWithWeekDayNoZero, locale: .jp)
+        SharedDefaultsManager.add(item: item)
+        return .result()
+    }
+}
+
+struct ToiletBigIntent: AppIntent {
+    static var title: LocalizedStringResource = "Big"
+
+    func perform() async throws -> some IntentResult {
+        let item = ToiletResultItem(toiletType: .big, date: Date(), deviceType: .widget)
+        let key = Date().asString(withFormat: .dateWithWeekDayNoZero, locale: .jp)
+        SharedDefaultsManager.add(item: item)
+        return .result()
+    }
+}
+
 
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
@@ -16,7 +41,7 @@ struct Provider: AppIntentTimelineProvider {
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
         SimpleEntry(date: Date(), configuration: configuration)
     }
-    
+
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
         var entries: [SimpleEntry] = []
 
@@ -42,12 +67,23 @@ struct ToiletCheckInWidgetEntryView : View {
 
     var body: some View {
         VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
+            Text("チェックイン")
+                .font(.system(size: 16, weight: .bold))
+            HStack {
+                Spacer()
+                Button(intent: ToiletBigIntent()) {
+                    Text(ToiletType.big.displayText)
+                        .font(.system(size: 28))
+                }
+                Spacer()
+                Button(intent: ToiletSmallIntent()) {
+                    Text(ToiletType.small.displayText)
+                        .font(.system(size: 28))
+                }
+                Spacer()
+            }
         }
+        .containerBackground(.fill.tertiary, for: .widget)
     }
 }
 
@@ -59,6 +95,8 @@ struct ToiletCheckInWidget: Widget {
             ToiletCheckInWidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
+        .configurationDisplayName("トイレチェックイン")
+        .supportedFamilies([.systemSmall])
     }
 }
 
@@ -68,7 +106,7 @@ extension ConfigurationAppIntent {
         intent.favoriteEmoji = "😀"
         return intent
     }
-    
+
     fileprivate static var starEyes: ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
         intent.favoriteEmoji = "🤩"
