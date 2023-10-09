@@ -12,8 +12,25 @@
 		C3CE22E32AD392C00091FFC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CE22E22AD392C00091FFC6 /* Assets.xcassets */; };
 		C3CE22E62AD392C00091FFC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CE22E52AD392C00091FFC6 /* Preview Assets.xcassets */; };
 		C3CE22F02AD392C00091FFC6 /* ToiletCheckInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE22EF2AD392C00091FFC6 /* ToiletCheckInTests.swift */; };
-		C3CE22FA2AD392C00091FFC6 /* ToiletCheckInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE22F92AD392C00091FFC6 /* ToiletCheckInUITests.swift */; };
-		C3CE22FC2AD392C00091FFC6 /* ToiletCheckInUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE22FB2AD392C00091FFC6 /* ToiletCheckInUITestsLaunchTests.swift */; };
+		C3CE230F2AD3937E0091FFC6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CE230E2AD3937E0091FFC6 /* WidgetKit.framework */; };
+		C3CE23112AD3937E0091FFC6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CE23102AD3937E0091FFC6 /* SwiftUI.framework */; };
+		C3CE23142AD3937E0091FFC6 /* ToiletCheckInWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE23132AD3937E0091FFC6 /* ToiletCheckInWidgetBundle.swift */; };
+		C3CE23162AD3937E0091FFC6 /* ToiletCheckInWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE23152AD3937E0091FFC6 /* ToiletCheckInWidgetLiveActivity.swift */; };
+		C3CE23182AD3937E0091FFC6 /* ToiletCheckInWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE23172AD3937E0091FFC6 /* ToiletCheckInWidget.swift */; };
+		C3CE231A2AD3937E0091FFC6 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE23192AD3937E0091FFC6 /* AppIntent.swift */; };
+		C3CE231C2AD3937F0091FFC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CE231B2AD3937F0091FFC6 /* Assets.xcassets */; };
+		C3CE23202AD3937F0091FFC6 /* ToiletCheckInWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C3CE230C2AD3937E0091FFC6 /* ToiletCheckInWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C3CE232C2AD3A46A0091FFC6 /* Testing in Frameworks */ = {isa = PBXBuildFile; productRef = C3CE232B2AD3A46A0091FFC6 /* Testing */; };
+		C3CE232F2AD3E7420091FFC6 /* ToiletCheckInListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE232E2AD3E7420091FFC6 /* ToiletCheckInListView.swift */; };
+		C3CE23322AD3E7860091FFC6 /* ToiletAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE23312AD3E7860091FFC6 /* ToiletAddView.swift */; };
+		C3CE23342AD3EAB10091FFC6 /* ToiletCheckInCore in Frameworks */ = {isa = PBXBuildFile; productRef = C3CE23332AD3EAB10091FFC6 /* ToiletCheckInCore */; };
+		C3CE23362AD3EAB70091FFC6 /* ToiletCheckInCore in Frameworks */ = {isa = PBXBuildFile; productRef = C3CE23352AD3EAB70091FFC6 /* ToiletCheckInCore */; };
+		C3CE23382AD3EEAD0091FFC6 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE23372AD3EEAD0091FFC6 /* SettingView.swift */; };
+		C3CE233E2AD40B550091FFC6 /* ToiletCheckInDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE233D2AD40B550091FFC6 /* ToiletCheckInDetailView.swift */; };
+		C3CE23422AD40E460091FFC6 /* FontSizeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE23412AD40E460091FFC6 /* FontSizeSliderView.swift */; };
+		C3CE23452AD4115E0091FFC6 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE23442AD4115E0091FFC6 /* Font.swift */; };
+		C3CE23482AD4146E0091FFC6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE23472AD4146E0091FFC6 /* UserDefaults.swift */; };
+		C3CE234A2AD414F40091FFC6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE23492AD414F40091FFC6 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,14 +41,28 @@
 			remoteGlobalIDString = C3CE22DA2AD392C00091FFC6;
 			remoteInfo = ToiletCheckIn;
 		};
-		C3CE22F62AD392C00091FFC6 /* PBXContainerItemProxy */ = {
+		C3CE231E2AD3937F0091FFC6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3CE22D32AD392BF0091FFC6 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C3CE22DA2AD392C00091FFC6;
-			remoteInfo = ToiletCheckIn;
+			remoteGlobalIDString = C3CE230B2AD3937E0091FFC6;
+			remoteInfo = ToiletCheckInWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C3CE23242AD3937F0091FFC6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C3CE23202AD3937F0091FFC6 /* ToiletCheckInWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C3CE22DB2AD392C00091FFC6 /* ToiletCheckIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletCheckIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,9 +72,26 @@
 		C3CE22E52AD392C00091FFC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C3CE22EB2AD392C00091FFC6 /* ToiletCheckInTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToiletCheckInTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CE22EF2AD392C00091FFC6 /* ToiletCheckInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInTests.swift; sourceTree = "<group>"; };
-		C3CE22F52AD392C00091FFC6 /* ToiletCheckInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToiletCheckInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3CE22F92AD392C00091FFC6 /* ToiletCheckInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInUITests.swift; sourceTree = "<group>"; };
-		C3CE22FB2AD392C00091FFC6 /* ToiletCheckInUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C3CE230C2AD3937E0091FFC6 /* ToiletCheckInWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ToiletCheckInWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3CE230E2AD3937E0091FFC6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C3CE23102AD3937E0091FFC6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C3CE23132AD3937E0091FFC6 /* ToiletCheckInWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInWidgetBundle.swift; sourceTree = "<group>"; };
+		C3CE23152AD3937E0091FFC6 /* ToiletCheckInWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		C3CE23172AD3937E0091FFC6 /* ToiletCheckInWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInWidget.swift; sourceTree = "<group>"; };
+		C3CE23192AD3937E0091FFC6 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		C3CE231B2AD3937F0091FFC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3CE231D2AD3937F0091FFC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3CE23252AD393C40091FFC6 /* ToiletCheckIn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToiletCheckIn.entitlements; sourceTree = "<group>"; };
+		C3CE23262AD393D00091FFC6 /* ToiletCheckInWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToiletCheckInWidgetExtension.entitlements; sourceTree = "<group>"; };
+		C3CE23272AD396990091FFC6 /* ToiletCheckInCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ToiletCheckInCore; sourceTree = "<group>"; };
+		C3CE232E2AD3E7420091FFC6 /* ToiletCheckInListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInListView.swift; sourceTree = "<group>"; };
+		C3CE23312AD3E7860091FFC6 /* ToiletAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletAddView.swift; sourceTree = "<group>"; };
+		C3CE23372AD3EEAD0091FFC6 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		C3CE233D2AD40B550091FFC6 /* ToiletCheckInDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInDetailView.swift; sourceTree = "<group>"; };
+		C3CE23412AD40E460091FFC6 /* FontSizeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeSliderView.swift; sourceTree = "<group>"; };
+		C3CE23442AD4115E0091FFC6 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		C3CE23472AD4146E0091FFC6 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		C3CE23492AD414F40091FFC6 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CE23342AD3EAB10091FFC6 /* ToiletCheckInCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +107,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CE232C2AD3A46A0091FFC6 /* Testing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3CE22F22AD392C00091FFC6 /* Frameworks */ = {
+		C3CE23092AD3937E0091FFC6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CE23112AD3937E0091FFC6 /* SwiftUI.framework in Frameworks */,
+				C3CE230F2AD3937E0091FFC6 /* WidgetKit.framework in Frameworks */,
+				C3CE23362AD3EAB70091FFC6 /* ToiletCheckInCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +127,12 @@
 		C3CE22D22AD392BF0091FFC6 = {
 			isa = PBXGroup;
 			children = (
+				C3CE23272AD396990091FFC6 /* ToiletCheckInCore */,
+				C3CE23262AD393D00091FFC6 /* ToiletCheckInWidgetExtension.entitlements */,
 				C3CE22DD2AD392C00091FFC6 /* ToiletCheckIn */,
 				C3CE22EE2AD392C00091FFC6 /* ToiletCheckInTests */,
-				C3CE22F82AD392C00091FFC6 /* ToiletCheckInUITests */,
+				C3CE23122AD3937E0091FFC6 /* ToiletCheckInWidget */,
+				C3CE230D2AD3937E0091FFC6 /* Frameworks */,
 				C3CE22DC2AD392C00091FFC6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +142,7 @@
 			children = (
 				C3CE22DB2AD392C00091FFC6 /* ToiletCheckIn.app */,
 				C3CE22EB2AD392C00091FFC6 /* ToiletCheckInTests.xctest */,
-				C3CE22F52AD392C00091FFC6 /* ToiletCheckInUITests.xctest */,
+				C3CE230C2AD3937E0091FFC6 /* ToiletCheckInWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +150,10 @@
 		C3CE22DD2AD392C00091FFC6 /* ToiletCheckIn */ = {
 			isa = PBXGroup;
 			children = (
+				C3CE23462AD414630091FFC6 /* Utils */,
+				C3CE23432AD411160091FFC6 /* Extensions */,
+				C3CE23302AD3E7700091FFC6 /* Views */,
+				C3CE23252AD393C40091FFC6 /* ToiletCheckIn.entitlements */,
 				C3CE22DE2AD392C00091FFC6 /* ToiletCheckInApp.swift */,
 				C3CE22E02AD392C00091FFC6 /* ContentView.swift */,
 				C3CE22E22AD392C00091FFC6 /* Assets.xcassets */,
@@ -118,13 +178,63 @@
 			path = ToiletCheckInTests;
 			sourceTree = "<group>";
 		};
-		C3CE22F82AD392C00091FFC6 /* ToiletCheckInUITests */ = {
+		C3CE230D2AD3937E0091FFC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C3CE22F92AD392C00091FFC6 /* ToiletCheckInUITests.swift */,
-				C3CE22FB2AD392C00091FFC6 /* ToiletCheckInUITestsLaunchTests.swift */,
+				C3CE230E2AD3937E0091FFC6 /* WidgetKit.framework */,
+				C3CE23102AD3937E0091FFC6 /* SwiftUI.framework */,
 			);
-			path = ToiletCheckInUITests;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3CE23122AD3937E0091FFC6 /* ToiletCheckInWidget */ = {
+			isa = PBXGroup;
+			children = (
+				C3CE23132AD3937E0091FFC6 /* ToiletCheckInWidgetBundle.swift */,
+				C3CE23152AD3937E0091FFC6 /* ToiletCheckInWidgetLiveActivity.swift */,
+				C3CE23172AD3937E0091FFC6 /* ToiletCheckInWidget.swift */,
+				C3CE23192AD3937E0091FFC6 /* AppIntent.swift */,
+				C3CE231B2AD3937F0091FFC6 /* Assets.xcassets */,
+				C3CE231D2AD3937F0091FFC6 /* Info.plist */,
+			);
+			path = ToiletCheckInWidget;
+			sourceTree = "<group>";
+		};
+		C3CE23302AD3E7700091FFC6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C3CE23402AD40E2D0091FFC6 /* Setting */,
+				C3CE23312AD3E7860091FFC6 /* ToiletAddView.swift */,
+				C3CE232E2AD3E7420091FFC6 /* ToiletCheckInListView.swift */,
+				C3CE233D2AD40B550091FFC6 /* ToiletCheckInDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C3CE23402AD40E2D0091FFC6 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				C3CE23372AD3EEAD0091FFC6 /* SettingView.swift */,
+				C3CE23412AD40E460091FFC6 /* FontSizeSliderView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		C3CE23432AD411160091FFC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C3CE23442AD4115E0091FFC6 /* Font.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C3CE23462AD414630091FFC6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C3CE23472AD4146E0091FFC6 /* UserDefaults.swift */,
+				C3CE23492AD414F40091FFC6 /* AppState.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,12 +247,17 @@
 				C3CE22D72AD392C00091FFC6 /* Sources */,
 				C3CE22D82AD392C00091FFC6 /* Frameworks */,
 				C3CE22D92AD392C00091FFC6 /* Resources */,
+				C3CE23242AD3937F0091FFC6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C3CE231F2AD3937F0091FFC6 /* PBXTargetDependency */,
 			);
 			name = ToiletCheckIn;
+			packageProductDependencies = (
+				C3CE23332AD3EAB10091FFC6 /* ToiletCheckInCore */,
+			);
 			productName = ToiletCheckIn;
 			productReference = C3CE22DB2AD392C00091FFC6 /* ToiletCheckIn.app */;
 			productType = "com.apple.product-type.application";
@@ -161,27 +276,32 @@
 				C3CE22ED2AD392C00091FFC6 /* PBXTargetDependency */,
 			);
 			name = ToiletCheckInTests;
+			packageProductDependencies = (
+				C3CE232B2AD3A46A0091FFC6 /* Testing */,
+			);
 			productName = ToiletCheckInTests;
 			productReference = C3CE22EB2AD392C00091FFC6 /* ToiletCheckInTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C3CE22F42AD392C00091FFC6 /* ToiletCheckInUITests */ = {
+		C3CE230B2AD3937E0091FFC6 /* ToiletCheckInWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3CE23052AD392C00091FFC6 /* Build configuration list for PBXNativeTarget "ToiletCheckInUITests" */;
+			buildConfigurationList = C3CE23212AD3937F0091FFC6 /* Build configuration list for PBXNativeTarget "ToiletCheckInWidgetExtension" */;
 			buildPhases = (
-				C3CE22F12AD392C00091FFC6 /* Sources */,
-				C3CE22F22AD392C00091FFC6 /* Frameworks */,
-				C3CE22F32AD392C00091FFC6 /* Resources */,
+				C3CE23082AD3937E0091FFC6 /* Sources */,
+				C3CE23092AD3937E0091FFC6 /* Frameworks */,
+				C3CE230A2AD3937E0091FFC6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C3CE22F72AD392C00091FFC6 /* PBXTargetDependency */,
 			);
-			name = ToiletCheckInUITests;
-			productName = ToiletCheckInUITests;
-			productReference = C3CE22F52AD392C00091FFC6 /* ToiletCheckInUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = ToiletCheckInWidgetExtension;
+			packageProductDependencies = (
+				C3CE23352AD3EAB70091FFC6 /* ToiletCheckInCore */,
+			);
+			productName = ToiletCheckInWidgetExtension;
+			productReference = C3CE230C2AD3937E0091FFC6 /* ToiletCheckInWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -200,9 +320,8 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = C3CE22DA2AD392C00091FFC6;
 					};
-					C3CE22F42AD392C00091FFC6 = {
+					C3CE230B2AD3937E0091FFC6 = {
 						CreatedOnToolsVersion = 15.0;
-						TestTargetID = C3CE22DA2AD392C00091FFC6;
 					};
 				};
 			};
@@ -215,13 +334,17 @@
 				Base,
 			);
 			mainGroup = C3CE22D22AD392BF0091FFC6;
+			packageReferences = (
+				C3CE23282AD3A4570091FFC6 /* XCRemoteSwiftPackageReference "swift-testing" */,
+				C3CE232D2AD3E03F0091FFC6 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = C3CE22DC2AD392C00091FFC6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C3CE22DA2AD392C00091FFC6 /* ToiletCheckIn */,
 				C3CE22EA2AD392C00091FFC6 /* ToiletCheckInTests */,
-				C3CE22F42AD392C00091FFC6 /* ToiletCheckInUITests */,
+				C3CE230B2AD3937E0091FFC6 /* ToiletCheckInWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -243,10 +366,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3CE22F32AD392C00091FFC6 /* Resources */ = {
+		C3CE230A2AD3937E0091FFC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CE231C2AD3937F0091FFC6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +381,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CE23382AD3EEAD0091FFC6 /* SettingView.swift in Sources */,
+				C3CE234A2AD414F40091FFC6 /* AppState.swift in Sources */,
 				C3CE22E12AD392C00091FFC6 /* ContentView.swift in Sources */,
+				C3CE233E2AD40B550091FFC6 /* ToiletCheckInDetailView.swift in Sources */,
 				C3CE22DF2AD392C00091FFC6 /* ToiletCheckInApp.swift in Sources */,
+				C3CE23452AD4115E0091FFC6 /* Font.swift in Sources */,
+				C3CE23482AD4146E0091FFC6 /* UserDefaults.swift in Sources */,
+				C3CE232F2AD3E7420091FFC6 /* ToiletCheckInListView.swift in Sources */,
+				C3CE23322AD3E7860091FFC6 /* ToiletAddView.swift in Sources */,
+				C3CE23422AD40E460091FFC6 /* FontSizeSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,12 +402,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3CE22F12AD392C00091FFC6 /* Sources */ = {
+		C3CE23082AD3937E0091FFC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3CE22FA2AD392C00091FFC6 /* ToiletCheckInUITests.swift in Sources */,
-				C3CE22FC2AD392C00091FFC6 /* ToiletCheckInUITestsLaunchTests.swift in Sources */,
+				C3CE23142AD3937E0091FFC6 /* ToiletCheckInWidgetBundle.swift in Sources */,
+				C3CE231A2AD3937E0091FFC6 /* AppIntent.swift in Sources */,
+				C3CE23162AD3937E0091FFC6 /* ToiletCheckInWidgetLiveActivity.swift in Sources */,
+				C3CE23182AD3937E0091FFC6 /* ToiletCheckInWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +421,10 @@
 			target = C3CE22DA2AD392C00091FFC6 /* ToiletCheckIn */;
 			targetProxy = C3CE22EC2AD392C00091FFC6 /* PBXContainerItemProxy */;
 		};
-		C3CE22F72AD392C00091FFC6 /* PBXTargetDependency */ = {
+		C3CE231F2AD3937F0091FFC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C3CE22DA2AD392C00091FFC6 /* ToiletCheckIn */;
-			targetProxy = C3CE22F62AD392C00091FFC6 /* PBXContainerItemProxy */;
+			target = C3CE230B2AD3937E0091FFC6 /* ToiletCheckInWidgetExtension */;
+			targetProxy = C3CE231E2AD3937F0091FFC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -417,8 +551,10 @@
 		C3CE23002AD392C00091FFC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ToiletCheckIn/ToiletCheckIn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToiletCheckIn/Preview Content\"";
@@ -435,7 +571,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = toiletChechIn.yugo.sugiyama.ToiletCheckIn;
+				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.toiletCheckIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -446,8 +582,10 @@
 		C3CE23012AD392C00091FFC6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ToiletCheckIn/ToiletCheckIn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToiletCheckIn/Preview Content\"";
@@ -464,7 +602,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = toiletChechIn.yugo.sugiyama.ToiletCheckIn;
+				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.toiletCheckIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -512,39 +650,59 @@
 			};
 			name = Release;
 		};
-		C3CE23062AD392C00091FFC6 /* Debug */ = {
+		C3CE23222AD3937F0091FFC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ToiletCheckInWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 669226BDWM;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToiletCheckInWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ToiletCheckInWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = toiletChechIn.yugo.sugiyama.ToiletCheckInUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.toiletCheckIn.ToiletCheckInWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ToiletCheckIn;
 			};
 			name = Debug;
 		};
-		C3CE23072AD392C00091FFC6 /* Release */ = {
+		C3CE23232AD3937F0091FFC6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ToiletCheckInWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 669226BDWM;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToiletCheckInWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ToiletCheckInWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = toiletChechIn.yugo.sugiyama.ToiletCheckInUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.toiletCheckIn.ToiletCheckInWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ToiletCheckIn;
 			};
 			name = Release;
 		};
@@ -578,16 +736,51 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3CE23052AD392C00091FFC6 /* Build configuration list for PBXNativeTarget "ToiletCheckInUITests" */ = {
+		C3CE23212AD3937F0091FFC6 /* Build configuration list for PBXNativeTarget "ToiletCheckInWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C3CE23062AD392C00091FFC6 /* Debug */,
-				C3CE23072AD392C00091FFC6 /* Release */,
+				C3CE23222AD3937F0091FFC6 /* Debug */,
+				C3CE23232AD3937F0091FFC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3CE23282AD3A4570091FFC6 /* XCRemoteSwiftPackageReference "swift-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-testing";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		C3CE232D2AD3E03F0091FFC6 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3CE232B2AD3A46A0091FFC6 /* Testing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3CE23282AD3A4570091FFC6 /* XCRemoteSwiftPackageReference "swift-testing" */;
+			productName = Testing;
+		};
+		C3CE23332AD3EAB10091FFC6 /* ToiletCheckInCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ToiletCheckInCore;
+		};
+		C3CE23352AD3EAB70091FFC6 /* ToiletCheckInCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ToiletCheckInCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3CE22D32AD392BF0091FFC6 /* Project object */;
 }

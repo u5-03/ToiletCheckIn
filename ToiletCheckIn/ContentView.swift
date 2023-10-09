@@ -2,23 +2,22 @@
 //  ContentView.swift
 //  ToiletCheckIn
 //
-//  Created by Yugo Sugiyama on 2023/10/09.
+//  Created by Yugo Sugiyama on 2023/10/02.
 //
 
 import SwiftUI
+import ToiletCheckInCore
 
 struct ContentView: View {
+    @State private var appState = AppState()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        ToiletCheckInListView()
+            .environment(\.appState, appState)
     }
 }
 
 #Preview {
     ContentView()
 }
+
