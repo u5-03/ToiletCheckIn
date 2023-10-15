@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C397E7612ADBA4F000209F12 /* ToiletCheckInWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397E7602ADBA4F000209F12 /* ToiletCheckInWatchAppApp.swift */; };
+		C397E7632ADBA4F000209F12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397E7622ADBA4F000209F12 /* ContentView.swift */; };
+		C397E7652ADBA4F100209F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C397E7642ADBA4F100209F12 /* Assets.xcassets */; };
+		C397E7682ADBA4F100209F12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C397E7672ADBA4F100209F12 /* Preview Assets.xcassets */; };
+		C397E76B2ADBA4F100209F12 /* ToiletCheckInWatchApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C397E75E2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C397E7722ADBA53A00209F12 /* ToiletCheckInCore in Frameworks */ = {isa = PBXBuildFile; productRef = C397E7712ADBA53A00209F12 /* ToiletCheckInCore */; };
 		C3CE22DF2AD392C00091FFC6 /* ToiletCheckInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE22DE2AD392C00091FFC6 /* ToiletCheckInApp.swift */; };
 		C3CE22E12AD392C00091FFC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE22E02AD392C00091FFC6 /* ContentView.swift */; };
 		C3CE22E32AD392C00091FFC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CE22E22AD392C00091FFC6 /* Assets.xcassets */; };
@@ -34,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C397E7692ADBA4F100209F12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3CE22D32AD392BF0091FFC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C397E75D2ADBA4F000209F12;
+			remoteInfo = "ToiletCheckInWatchApp Watch App";
+		};
 		C3CE22EC2AD392C00091FFC6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3CE22D32AD392BF0091FFC6 /* Project object */;
@@ -51,6 +64,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		C397E76C2ADBA4F100209F12 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C397E76B2ADBA4F100209F12 /* ToiletCheckInWatchApp Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3CE23242AD3937F0091FFC6 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,6 +89,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C397E75E2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToiletCheckInWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C397E7602ADBA4F000209F12 /* ToiletCheckInWatchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInWatchAppApp.swift; sourceTree = "<group>"; };
+		C397E7622ADBA4F000209F12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C397E7642ADBA4F100209F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C397E7672ADBA4F100209F12 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C397E7702ADBA50500209F12 /* ToiletCheckInWatchApp Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ToiletCheckInWatchApp Watch App.entitlements"; sourceTree = "<group>"; };
 		C3CE22DB2AD392C00091FFC6 /* ToiletCheckIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletCheckIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CE22DE2AD392C00091FFC6 /* ToiletCheckInApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInApp.swift; sourceTree = "<group>"; };
 		C3CE22E02AD392C00091FFC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +125,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C397E75B2ADBA4F000209F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C397E7722ADBA53A00209F12 /* ToiletCheckInCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3CE22D82AD392C00091FFC6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +162,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C397E75F2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				C397E7702ADBA50500209F12 /* ToiletCheckInWatchApp Watch App.entitlements */,
+				C397E7602ADBA4F000209F12 /* ToiletCheckInWatchAppApp.swift */,
+				C397E7622ADBA4F000209F12 /* ContentView.swift */,
+				C397E7642ADBA4F100209F12 /* Assets.xcassets */,
+				C397E7662ADBA4F100209F12 /* Preview Content */,
+			);
+			path = "ToiletCheckInWatchApp Watch App";
+			sourceTree = "<group>";
+		};
+		C397E7662ADBA4F100209F12 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C397E7672ADBA4F100209F12 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		C3CE22D22AD392BF0091FFC6 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +190,7 @@
 				C3CE22DD2AD392C00091FFC6 /* ToiletCheckIn */,
 				C3CE22EE2AD392C00091FFC6 /* ToiletCheckInTests */,
 				C3CE23122AD3937E0091FFC6 /* ToiletCheckInWidget */,
+				C397E75F2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App */,
 				C3CE230D2AD3937E0091FFC6 /* Frameworks */,
 				C3CE22DC2AD392C00091FFC6 /* Products */,
 			);
@@ -143,6 +202,7 @@
 				C3CE22DB2AD392C00091FFC6 /* ToiletCheckIn.app */,
 				C3CE22EB2AD392C00091FFC6 /* ToiletCheckInTests.xctest */,
 				C3CE230C2AD3937E0091FFC6 /* ToiletCheckInWidgetExtension.appex */,
+				C397E75E2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,6 +300,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C397E75D2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C397E76F2ADBA4F100209F12 /* Build configuration list for PBXNativeTarget "ToiletCheckInWatchApp Watch App" */;
+			buildPhases = (
+				C397E75A2ADBA4F000209F12 /* Sources */,
+				C397E75B2ADBA4F000209F12 /* Frameworks */,
+				C397E75C2ADBA4F000209F12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ToiletCheckInWatchApp Watch App";
+			packageProductDependencies = (
+				C397E7712ADBA53A00209F12 /* ToiletCheckInCore */,
+			);
+			productName = "ToiletCheckInWatchApp Watch App";
+			productReference = C397E75E2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		C3CE22DA2AD392C00091FFC6 /* ToiletCheckIn */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3CE22FF2AD392C00091FFC6 /* Build configuration list for PBXNativeTarget "ToiletCheckIn" */;
@@ -248,11 +328,13 @@
 				C3CE22D82AD392C00091FFC6 /* Frameworks */,
 				C3CE22D92AD392C00091FFC6 /* Resources */,
 				C3CE23242AD3937F0091FFC6 /* Embed Foundation Extensions */,
+				C397E76C2ADBA4F100209F12 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				C3CE231F2AD3937F0091FFC6 /* PBXTargetDependency */,
+				C397E76A2ADBA4F100209F12 /* PBXTargetDependency */,
 			);
 			name = ToiletCheckIn;
 			packageProductDependencies = (
@@ -310,9 +392,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					C397E75D2ADBA4F000209F12 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					C3CE22DA2AD392C00091FFC6 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -345,11 +430,21 @@
 				C3CE22DA2AD392C00091FFC6 /* ToiletCheckIn */,
 				C3CE22EA2AD392C00091FFC6 /* ToiletCheckInTests */,
 				C3CE230B2AD3937E0091FFC6 /* ToiletCheckInWidgetExtension */,
+				C397E75D2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C397E75C2ADBA4F000209F12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C397E7682ADBA4F100209F12 /* Preview Assets.xcassets in Resources */,
+				C397E7652ADBA4F100209F12 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3CE22D92AD392C00091FFC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,6 +472,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C397E75A2ADBA4F000209F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C397E7632ADBA4F000209F12 /* ContentView.swift in Sources */,
+				C397E7612ADBA4F000209F12 /* ToiletCheckInWatchAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3CE22D72AD392C00091FFC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,6 +520,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C397E76A2ADBA4F100209F12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C397E75D2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App */;
+			targetProxy = C397E7692ADBA4F100209F12 /* PBXContainerItemProxy */;
+		};
 		C3CE22ED2AD392C00091FFC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C3CE22DA2AD392C00091FFC6 /* ToiletCheckIn */;
@@ -429,6 +538,68 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		C397E76D2ADBA4F100209F12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ToiletCheckInWatchApp Watch App/ToiletCheckInWatchApp Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ToiletCheckInWatchApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 669226BDWM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ToiletCheckInWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = yugo.sugiyama.toiletCheckIn;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.toiletCheckIn.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		C397E76E2ADBA4F100209F12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ToiletCheckInWatchApp Watch App/ToiletCheckInWatchApp Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ToiletCheckInWatchApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 669226BDWM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ToiletCheckInWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = yugo.sugiyama.toiletCheckIn;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.toiletCheckIn.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 		C3CE22FD2AD392C00091FFC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -709,6 +880,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C397E76F2ADBA4F100209F12 /* Build configuration list for PBXNativeTarget "ToiletCheckInWatchApp Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C397E76D2ADBA4F100209F12 /* Debug */,
+				C397E76E2ADBA4F100209F12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C3CE22D62AD392BF0091FFC6 /* Build configuration list for PBXProject "ToiletCheckIn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -767,6 +947,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C397E7712ADBA53A00209F12 /* ToiletCheckInCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ToiletCheckInCore;
+		};
 		C3CE232B2AD3A46A0091FFC6 /* Testing */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C3CE23282AD3A4570091FFC6 /* XCRemoteSwiftPackageReference "swift-testing" */;

@@ -10,15 +10,9 @@ import SwiftUI
 public struct ToiletCheckInButtonView: View {
     let deviceType: DeviceType
     let completion: (ToiletType) -> Void
-    @State private var lastCheckInType: ToiletType?
     @State private var selectedToiletType: ToiletType?
-    private var watchDisplayText: String {
-        if let lastCheckInType {
-            return "追加✅: \(lastCheckInType.displayIconString)"
-        } else {
-            return ""
-        }
-    }
+    @State private var shouldShowCheckmark = false
+
     private var fontSize: CGFloat {
         switch deviceType {
         case .watch, .widget:
@@ -40,14 +34,15 @@ public struct ToiletCheckInButtonView: View {
     private func button(toiletType: ToiletType) -> some View {
         Button(action: {
             if deviceType == .watch {
-                save(type: toiletType)
+                withAnimation {
+                    shouldShowCheckmark = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        shouldShowCheckmark = false
+                    }
+                }
             }
-            completion(toiletType)
-            lastCheckInType = toiletType
             selectedToiletType = toiletType
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                lastCheckInType = nil
-            }
+            completion(toiletType)
         }, label: {
             Text(toiletType.displayIconString)
                 .font(.system(size: fontSize, weight: .bold))
@@ -56,23 +51,30 @@ public struct ToiletCheckInButtonView: View {
 
     public var body: some View {
         VStack {
-            if deviceType == .watch {
-                Text("チェックインする")
-                    .font(.headline)
-                Spacer()
-                    .frame(height: 20)
+            Spacer()
+            HStack(spacing: 4) {
+                Text("チェックイン")
+                    .font(.system(size: 16, weight: .bold))
+                Group {
+                    if shouldShowCheckmark {
+                        Image(systemName: "checkmark")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    } else {
+                        Color.clear
+                    }
+                }
+                .frame(width: 16, height: 16)
             }
+            Spacer()
+                .frame(height: 20)
             HStack {
                 ForEach([ToiletType.big(type: .hard), ToiletType.small]) { type in
                     button(toiletType: type)
                         .opacity(buttonOpacity(toiletType: type))
                 }
             }
-            if deviceType == .watch {
-                Spacer()
-                    .frame(height: 20)
-                Text(watchDisplayText)
-            }
+            Spacer()
         }
     }
 

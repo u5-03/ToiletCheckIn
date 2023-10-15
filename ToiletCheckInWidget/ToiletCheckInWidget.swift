@@ -60,10 +60,6 @@ struct Provider: AppIntentTimelineProvider {
         let entries: [SimpleEntry] = [
             SimpleEntry(date: entryDate, shouldShowCheck: SharedDefaults.shouldShowCheckmark, configuration: configuration)
         ]
-//        for hourOffset in 0 ..< 5 {
-//
-//            entries.append(entry)
-//        }
 
         return Timeline(entries: entries, policy: .atEnd)
     }
@@ -79,7 +75,7 @@ struct ToiletCheckInWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack() {
+        VStack {
             Spacer()
             HStack(spacing: 4) {
                 Text("チェックイン")

@@ -14,6 +14,7 @@ struct ToiletCheckInListView: View {
     @State private var resultItems: [ToiletResultItem] = []
     @State private var shouldShowSettingView = false
     @State private var shouldShowAddingView = false
+    private let watchDataHandler = WatchDataHandler()
     private let buttonSizeHeight: CGFloat = 60
     private let buttonBottomMargin: CGFloat = 20
     private var results: [ToiletResult] {
@@ -45,11 +46,16 @@ struct ToiletCheckInListView: View {
                     refreshResults()
                 }
             }
+            // @Observation&onChangeだと通知されない
+            .onReceive(watchDataHandler.subject, perform: { _ in
+                refreshResults()
+            })
             .sheet(isPresented: $shouldShowSettingView) {
                 SettingView()
             }
             .sheet(isPresented: $shouldShowAddingView) {
                 ToiletAddView()
+                    .presentationDetents([.medium])
             }
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
