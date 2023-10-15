@@ -24,6 +24,7 @@ struct SettingView: View {
     @State private var shouldShowDataResetAlert = false
     @State private var startDayTime = 0
     @State private var selectedBigType = ToiletType.ToiletBigType.default
+    @State private var shouldShowMockAlert = false
     private let startDayTimeSelections = Array(0...24)
     private let sectionHeaderFont: Font = .headline
     private let contentLabelFont: Font = .body
@@ -106,8 +107,29 @@ struct SettingView: View {
                             .font(contentLabelFont)
                     }
                     LabeledContent("バージョン") {
+#if DEBUG
+                        Button(action: {
+                            shouldShowMockAlert = true
+                        }, label: {
+                            Text("\(appVersion)(\(buildNumber))")
+                                .font(contentLabelFont)
+                        })
+                        .alert("データのクリア", isPresented: $shouldShowMockAlert) {
+                            Button(role: .destructive) {
+                                UserDefaults.standard.isMockEnable.toggle()
+                            } label: {
+                                Text("\(UserDefaults.standard.isMockEnable ? "通常" : "Mock")モードに切り替える")
+                                    .font(contentLabelFont)
+                            }
+                            Button(role: .cancel, action: {}) {
+                                Text("キャンセルする")
+                                    .font(contentLabelFont)
+                            }
+                        }
+#else
                         Text("\(appVersion)(\(buildNumber))")
                             .font(contentLabelFont)
+#endif
                     }
                 } header: {
                     Text("アプリ情報")

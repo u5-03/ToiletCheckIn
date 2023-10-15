@@ -168,7 +168,11 @@ private extension ToiletCheckInListView {
 private extension ToiletCheckInListView {
     func refreshResults() {
         withAnimation {
-            resultItems = SharedDefaults.toiletResults
+            if UserDefaults.standard.isMockEnable {
+                resultItems = ToiletResultItem.mocks
+            } else {
+                resultItems = SharedDefaults.toiletResults
+            }
         }
     }
 

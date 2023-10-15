@@ -644,7 +644,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ToiletCheckInWatchApp Watch App/ToiletCheckInWatchApp Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ToiletCheckInWatchApp Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 669226BDWM;
 				ENABLE_PREVIEWS = YES;
@@ -678,7 +678,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ToiletCheckInWatchApp Watch App/ToiletCheckInWatchApp Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ToiletCheckInWatchApp Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 669226BDWM;
 				ENABLE_PREVIEWS = YES;
@@ -891,7 +891,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ToiletCheckIn/ToiletCheckIn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ToiletCheckIn/Preview Content\"";
 				DEVELOPMENT_TEAM = 669226BDWM;
 				ENABLE_PREVIEWS = YES;
@@ -924,7 +924,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ToiletCheckIn/ToiletCheckIn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ToiletCheckIn/Preview Content\"";
 				DEVELOPMENT_TEAM = 669226BDWM;
 				ENABLE_PREVIEWS = YES;

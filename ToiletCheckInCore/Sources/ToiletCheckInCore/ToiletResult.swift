@@ -79,12 +79,44 @@ public struct ToiletResultItem: Codable, Identifiable, Equatable {
     public let toiletType: ToiletType
     public let date: Date
     public let deviceType: DeviceType
-
+    
     public init(id: String? = nil, toiletType: ToiletType, date: Date, deviceType: DeviceType) {
         self.id = id ?? UUID().uuidString
         self.toiletType = toiletType
         self.date = date
         self.deviceType = deviceType
+    }
+
+    public static var mocks: [ToiletResultItem] {
+        return [
+            ToiletResultItem(toiletType: .small, date: Date().offsetHours(offset: -14)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .big(type: .hard), date: Date().offsetHours(offset: -8)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .small, date: Date().offsetHours(offset: -4)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .small, date: Date(), deviceType: .phone),
+
+            ToiletResultItem(toiletType: .small, date: Date().offsetDays(offset: -1)!.offsetHours(offset: -14)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .big(type: .hard), date: Date().offsetDays(offset: -1)!.offsetHours(offset: -8)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .small, date: Date().offsetDays(offset: -1)!.offsetHours(offset: -4)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .small, date: Date().offsetDays(offset: -1)!, deviceType: .phone),
+
+
+            ToiletResultItem(toiletType: .small, date: Date().offsetDays(offset: -2)!.offsetHours(offset: -14)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .big(type: .hard), date: Date().offsetDays(offset: -2)!.offsetHours(offset: -8)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .small, date: Date().offsetDays(offset: -2)!.offsetHours(offset: -4)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .small, date: Date().offsetDays(offset: -2)!, deviceType: .phone),
+
+
+            ToiletResultItem(toiletType: .small, date: Date().offsetDays(offset: -3)!.offsetHours(offset: -14)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .big(type: .hard), date: Date().offsetDays(offset: -3)!.offsetHours(offset: -8)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .small, date: Date().offsetDays(offset: -3)!.offsetHours(offset: -4)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .small, date: Date().offsetDays(offset: -3)!, deviceType: .phone),
+
+
+            ToiletResultItem(toiletType: .small, date: Date().offsetDays(offset: -4)!.offsetHours(offset: -14)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .big(type: .hard), date: Date().offsetDays(offset: -4)!.offsetHours(offset: -8)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .small, date: Date().offsetDays(offset: -4)!.offsetHours(offset: -4)!, deviceType: .phone),
+            ToiletResultItem(toiletType: .small, date: Date().offsetDays(offset: -4)!, deviceType: .phone),
+        ]
     }
 }
 
@@ -115,7 +147,7 @@ public extension Array where Element == ToiletResultItem {
                 tempItems = []
                 currentDate = item.date
             } else {
-                
+
             }
             tempItems.append(item)
         }

@@ -11,6 +11,7 @@ import ToiletCheckInCore
 
 enum UserDefaultsKey: String {
     case fontSizeType
+    case isMockEnable
 }
 
 extension UserDefaults {
@@ -21,6 +22,15 @@ extension UserDefaults {
         }
         set {
             setValue(newValue.rawValue, forKey: UserDefaultsKey.fontSizeType.rawValue)
+        }
+    }
+
+    var isMockEnable: Bool {
+        get {
+            return bool(forKey: UserDefaultsKey.isMockEnable.rawValue)
+        }
+        set {
+            setValue(newValue, forKey: UserDefaultsKey.isMockEnable.rawValue)
         }
     }
 }
