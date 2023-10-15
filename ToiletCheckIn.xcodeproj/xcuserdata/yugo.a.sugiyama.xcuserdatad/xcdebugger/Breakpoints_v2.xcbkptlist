@@ -14,8 +14,8 @@
             filePath = "ToiletCheckIn/Views/ToiletCheckInListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "refreshResults()"
             landmarkType = "7">
          </BreakpointContent>
@@ -130,69 +130,6 @@
             endingLineNumber = "57"
             landmarkName = "session(_:didReceiveMessage:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6D5F131D-E9D4-4575-ADED-BE55EFBF3D6E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToiletCheckIn/Views/ToiletCheckInListView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "6D5F131D-E9D4-4575-ADED-BE55EFBF3D6E - a9687cb1e9965b9c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #6 (ToiletCheckInCore.ToiletResultItem) -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in ToiletCheckIn.ToiletCheckInListView.body.getter : some"
-                  moduleName = "ToiletCheckIn"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yugo.a.sugiyama/Dev/Swift/ToiletCheckIn/ToiletCheckIn/Views/ToiletCheckInListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  uuid = "6D5F131D-E9D4-4575-ADED-BE55EFBF3D6E - 5694dfe64826ab68"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in ToiletCheckIn.ToiletCheckInListView.body.getter : some"
-                  moduleName = "ToiletCheckIn"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yugo.a.sugiyama/Dev/Swift/ToiletCheckIn/ToiletCheckIn/Views/ToiletCheckInListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "2748">
-               </Location>
-               <Location
-                  uuid = "6D5F131D-E9D4-4575-ADED-BE55EFBF3D6E - 5cbb6448c8bc9e27"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #7 () -&gt; ToiletCheckIn.ToiletAddView in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in ToiletCheckIn.ToiletCheckInListView.body.getter : some"
-                  moduleName = "ToiletCheckIn"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yugo.a.sugiyama/Dev/Swift/ToiletCheckIn/ToiletCheckIn/Views/ToiletCheckInListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "104">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

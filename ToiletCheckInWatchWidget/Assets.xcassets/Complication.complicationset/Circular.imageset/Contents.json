@@ -1,0 +1,28 @@
+{
+  "images" : [
+    {
+      "filename" : "AppleWatch-36-36.svg",
+      "idiom" : "watch",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "AppleWatch-32-32.png",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "screen-width" : "<=145"
+    },
+    {
+      "filename" : "AppleWatch-40-40.png",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "screen-width" : ">183"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "auto-scaling" : "auto"
+  }
+}

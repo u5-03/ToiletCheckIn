@@ -48,7 +48,9 @@ struct ToiletCheckInListView: View {
             }
             // @Observation&onChangeだと通知されない
             .onReceive(watchDataHandler.subject, perform: { _ in
-                refreshResults()
+                DispatchQueue.main.async {
+                    refreshResults()
+                }
             })
             .sheet(isPresented: $shouldShowSettingView) {
                 SettingView()

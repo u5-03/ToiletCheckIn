@@ -11,8 +11,14 @@
 		C397E7632ADBA4F000209F12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397E7622ADBA4F000209F12 /* ContentView.swift */; };
 		C397E7652ADBA4F100209F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C397E7642ADBA4F100209F12 /* Assets.xcassets */; };
 		C397E7682ADBA4F100209F12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C397E7672ADBA4F100209F12 /* Preview Assets.xcassets */; };
-		C397E76B2ADBA4F100209F12 /* ToiletCheckInWatchApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C397E75E2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C397E76B2ADBA4F100209F12 /* トイレチェックイン.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C397E75E2ADBA4F000209F12 /* トイレチェックイン.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C397E7722ADBA53A00209F12 /* ToiletCheckInCore in Frameworks */ = {isa = PBXBuildFile; productRef = C397E7712ADBA53A00209F12 /* ToiletCheckInCore */; };
+		C397E7932ADC01C600209F12 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CE230E2AD3937E0091FFC6 /* WidgetKit.framework */; };
+		C397E7942ADC01C600209F12 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CE23102AD3937E0091FFC6 /* SwiftUI.framework */; };
+		C397E7972ADC01C600209F12 /* ToiletCheckInWatchWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397E7962ADC01C600209F12 /* ToiletCheckInWatchWidget.swift */; };
+		C397E7992ADC01C700209F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C397E7982ADC01C700209F12 /* Assets.xcassets */; };
+		C397E79D2ADC01C700209F12 /* ToiletCheckInWatchWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C397E7922ADC01C600209F12 /* ToiletCheckInWatchWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C397E7A12ADC01E600209F12 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C397E7752ADBF3E900209F12 /* ComplicationController.swift */; };
 		C3CE22DF2AD392C00091FFC6 /* ToiletCheckInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE22DE2AD392C00091FFC6 /* ToiletCheckInApp.swift */; };
 		C3CE22E12AD392C00091FFC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE22E02AD392C00091FFC6 /* ContentView.swift */; };
 		C3CE22E32AD392C00091FFC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CE22E22AD392C00091FFC6 /* Assets.xcassets */; };
@@ -47,6 +53,13 @@
 			remoteGlobalIDString = C397E75D2ADBA4F000209F12;
 			remoteInfo = "ToiletCheckInWatchApp Watch App";
 		};
+		C397E79B2ADC01C700209F12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3CE22D32AD392BF0091FFC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C397E7912ADC01C600209F12;
+			remoteInfo = ToiletCheckInWatchWidgetExtension;
+		};
 		C3CE22EC2AD392C00091FFC6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3CE22D32AD392BF0091FFC6 /* Project object */;
@@ -70,9 +83,20 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				C397E76B2ADBA4F100209F12 /* ToiletCheckInWatchApp Watch App.app in Embed Watch Content */,
+				C397E76B2ADBA4F100209F12 /* トイレチェックイン.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C397E78D2ADBFF3D00209F12 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C397E79D2ADC01C700209F12 /* ToiletCheckInWatchWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C3CE23242AD3937F0091FFC6 /* Embed Foundation Extensions */ = {
@@ -89,12 +113,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C397E75E2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToiletCheckInWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C397E75E2ADBA4F000209F12 /* トイレチェックイン.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "トイレチェックイン.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C397E7602ADBA4F000209F12 /* ToiletCheckInWatchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInWatchAppApp.swift; sourceTree = "<group>"; };
 		C397E7622ADBA4F000209F12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C397E7642ADBA4F100209F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C397E7672ADBA4F100209F12 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C397E7702ADBA50500209F12 /* ToiletCheckInWatchApp Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ToiletCheckInWatchApp Watch App.entitlements"; sourceTree = "<group>"; };
+		C397E7752ADBF3E900209F12 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		C397E7772ADBFE7400209F12 /* ToiletCheckInWatchApp-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ToiletCheckInWatchApp-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C397E7922ADC01C600209F12 /* ToiletCheckInWatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ToiletCheckInWatchWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C397E7962ADC01C600209F12 /* ToiletCheckInWatchWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInWatchWidget.swift; sourceTree = "<group>"; };
+		C397E7982ADC01C700209F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C397E79A2ADC01C700209F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3CE22DB2AD392C00091FFC6 /* ToiletCheckIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletCheckIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CE22DE2AD392C00091FFC6 /* ToiletCheckInApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCheckInApp.swift; sourceTree = "<group>"; };
 		C3CE22E02AD392C00091FFC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +163,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C397E78F2ADC01C600209F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C397E7942ADC01C600209F12 /* SwiftUI.framework in Frameworks */,
+				C397E7932ADC01C600209F12 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3CE22D82AD392C00091FFC6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,6 +204,7 @@
 		C397E75F2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				C397E7772ADBFE7400209F12 /* ToiletCheckInWatchApp-Watch-App-Info.plist */,
 				C397E7702ADBA50500209F12 /* ToiletCheckInWatchApp Watch App.entitlements */,
 				C397E7602ADBA4F000209F12 /* ToiletCheckInWatchAppApp.swift */,
 				C397E7622ADBA4F000209F12 /* ContentView.swift */,
@@ -182,6 +222,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C397E7952ADC01C600209F12 /* ToiletCheckInWatchWidget */ = {
+			isa = PBXGroup;
+			children = (
+				C397E7962ADC01C600209F12 /* ToiletCheckInWatchWidget.swift */,
+				C397E7752ADBF3E900209F12 /* ComplicationController.swift */,
+				C397E7982ADC01C700209F12 /* Assets.xcassets */,
+				C397E79A2ADC01C700209F12 /* Info.plist */,
+			);
+			path = ToiletCheckInWatchWidget;
+			sourceTree = "<group>";
+		};
 		C3CE22D22AD392BF0091FFC6 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +242,7 @@
 				C3CE22EE2AD392C00091FFC6 /* ToiletCheckInTests */,
 				C3CE23122AD3937E0091FFC6 /* ToiletCheckInWidget */,
 				C397E75F2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App */,
+				C397E7952ADC01C600209F12 /* ToiletCheckInWatchWidget */,
 				C3CE230D2AD3937E0091FFC6 /* Frameworks */,
 				C3CE22DC2AD392C00091FFC6 /* Products */,
 			);
@@ -202,7 +254,8 @@
 				C3CE22DB2AD392C00091FFC6 /* ToiletCheckIn.app */,
 				C3CE22EB2AD392C00091FFC6 /* ToiletCheckInTests.xctest */,
 				C3CE230C2AD3937E0091FFC6 /* ToiletCheckInWidgetExtension.appex */,
-				C397E75E2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App.app */,
+				C397E75E2ADBA4F000209F12 /* トイレチェックイン.app */,
+				C397E7922ADC01C600209F12 /* ToiletCheckInWatchWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -307,18 +360,37 @@
 				C397E75A2ADBA4F000209F12 /* Sources */,
 				C397E75B2ADBA4F000209F12 /* Frameworks */,
 				C397E75C2ADBA4F000209F12 /* Resources */,
+				C397E78D2ADBFF3D00209F12 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C397E79C2ADC01C700209F12 /* PBXTargetDependency */,
 			);
 			name = "ToiletCheckInWatchApp Watch App";
 			packageProductDependencies = (
 				C397E7712ADBA53A00209F12 /* ToiletCheckInCore */,
 			);
 			productName = "ToiletCheckInWatchApp Watch App";
-			productReference = C397E75E2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App.app */;
+			productReference = C397E75E2ADBA4F000209F12 /* トイレチェックイン.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C397E7912ADC01C600209F12 /* ToiletCheckInWatchWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C397E79E2ADC01C700209F12 /* Build configuration list for PBXNativeTarget "ToiletCheckInWatchWidgetExtension" */;
+			buildPhases = (
+				C397E78E2ADC01C600209F12 /* Sources */,
+				C397E78F2ADC01C600209F12 /* Frameworks */,
+				C397E7902ADC01C600209F12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToiletCheckInWatchWidgetExtension;
+			productName = ToiletCheckInWatchWidgetExtension;
+			productReference = C397E7922ADC01C600209F12 /* ToiletCheckInWatchWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		C3CE22DA2AD392C00091FFC6 /* ToiletCheckIn */ = {
 			isa = PBXNativeTarget;
@@ -398,6 +470,9 @@
 					C397E75D2ADBA4F000209F12 = {
 						CreatedOnToolsVersion = 15.1;
 					};
+					C397E7912ADC01C600209F12 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					C3CE22DA2AD392C00091FFC6 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -431,6 +506,7 @@
 				C3CE22EA2AD392C00091FFC6 /* ToiletCheckInTests */,
 				C3CE230B2AD3937E0091FFC6 /* ToiletCheckInWidgetExtension */,
 				C397E75D2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App */,
+				C397E7912ADC01C600209F12 /* ToiletCheckInWatchWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -442,6 +518,14 @@
 			files = (
 				C397E7682ADBA4F100209F12 /* Preview Assets.xcassets in Resources */,
 				C397E7652ADBA4F100209F12 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C397E7902ADC01C600209F12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C397E7992ADC01C700209F12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +562,15 @@
 			files = (
 				C397E7632ADBA4F000209F12 /* ContentView.swift in Sources */,
 				C397E7612ADBA4F000209F12 /* ToiletCheckInWatchAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C397E78E2ADC01C600209F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C397E7972ADC01C600209F12 /* ToiletCheckInWatchWidget.swift in Sources */,
+				C397E7A12ADC01E600209F12 /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +618,11 @@
 			target = C397E75D2ADBA4F000209F12 /* ToiletCheckInWatchApp Watch App */;
 			targetProxy = C397E7692ADBA4F100209F12 /* PBXContainerItemProxy */;
 		};
+		C397E79C2ADC01C700209F12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C397E7912ADC01C600209F12 /* ToiletCheckInWatchWidgetExtension */;
+			targetProxy = C397E79B2ADC01C700209F12 /* PBXContainerItemProxy */;
+		};
 		C3CE22ED2AD392C00091FFC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C3CE22DA2AD392C00091FFC6 /* ToiletCheckIn */;
@@ -541,6 +639,7 @@
 		C397E76D2ADBA4F100209F12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ToiletCheckInWatchApp Watch App/ToiletCheckInWatchApp Watch App.entitlements";
@@ -550,16 +649,18 @@
 				DEVELOPMENT_TEAM = 669226BDWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = ToiletCheckInWatchApp;
+				INFOPLIST_FILE = "ToiletCheckInWatchApp-Watch-App-Info.plist";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = ComplicationController;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = yugo.sugiyama.toiletCheckIn;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.toiletCheckIn.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "トイレチェックイン";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -572,6 +673,7 @@
 		C397E76E2ADBA4F100209F12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "ToiletCheckInWatchApp Watch App/ToiletCheckInWatchApp Watch App.entitlements";
@@ -581,15 +683,77 @@
 				DEVELOPMENT_TEAM = 669226BDWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = ToiletCheckInWatchApp;
+				INFOPLIST_FILE = "ToiletCheckInWatchApp-Watch-App-Info.plist";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = ComplicationController;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = yugo.sugiyama.toiletCheckIn;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.toiletCheckIn.watchkitapp;
+				PRODUCT_NAME = "トイレチェックイン";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		C397E79F2ADC01C700209F12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 669226BDWM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToiletCheckInWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ToiletCheckInWatchWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.toiletCheckIn.watchkitapp.ToiletCheckInWatchWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		C397E7A02ADC01C700209F12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 669226BDWM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToiletCheckInWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ToiletCheckInWatchWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.toiletCheckIn.watchkitapp.ToiletCheckInWatchWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -732,16 +896,18 @@
 				DEVELOPMENT_TEAM = 669226BDWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "トイレチェックイン";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.toiletCheckIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -763,16 +929,18 @@
 				DEVELOPMENT_TEAM = 669226BDWM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "トイレチェックイン";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.toiletCheckIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -885,6 +1053,15 @@
 			buildConfigurations = (
 				C397E76D2ADBA4F100209F12 /* Debug */,
 				C397E76E2ADBA4F100209F12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C397E79E2ADC01C700209F12 /* Build configuration list for PBXNativeTarget "ToiletCheckInWatchWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C397E79F2ADC01C700209F12 /* Debug */,
+				C397E7A02ADC01C700209F12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
