@@ -14,7 +14,7 @@ public struct ToiletCheckInButtonView: View {
     @State private var selectedToiletType: ToiletType?
     private var watchDisplayText: String {
         if let lastCheckInType {
-            return "追加✅: \(lastCheckInType.displayText)"
+            return "追加✅: \(lastCheckInType.displayIconString)"
         } else {
             return ""
         }
@@ -33,24 +33,23 @@ public struct ToiletCheckInButtonView: View {
         self.completion = completion
     }
 
-    private func buttonOpacity(type: ToiletType) -> CGFloat {
-        return (selectedToiletType != nil && selectedToiletType != type) ? 0.4 : 1
+    private func buttonOpacity(toiletType: ToiletType) -> CGFloat {
+        return (selectedToiletType != nil && selectedToiletType != toiletType) ? 0.2 : 1
     }
 
-    private func button(type: ToiletType) -> some View {
+    private func button(toiletType: ToiletType) -> some View {
         Button(action: {
-            print(type.displayText)
             if deviceType == .watch {
-                save(type: type)
+                save(type: toiletType)
             }
-            completion(type)
-            lastCheckInType = type
-            selectedToiletType = type
+            completion(toiletType)
+            lastCheckInType = toiletType
+            selectedToiletType = toiletType
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 lastCheckInType = nil
             }
         }, label: {
-            Text(type.displayText)
+            Text(toiletType.displayIconString)
                 .font(.system(size: fontSize, weight: .bold))
         })
     }
@@ -64,9 +63,9 @@ public struct ToiletCheckInButtonView: View {
                     .frame(height: 20)
             }
             HStack {
-                ForEach(ToiletType.allCases) { type in
-                    button(type: type)
-                        .opacity(buttonOpacity(type: type))
+                ForEach([ToiletType.big(type: .hard), ToiletType.small]) { type in
+                    button(toiletType: type)
+                        .opacity(buttonOpacity(toiletType: type))
                 }
             }
             if deviceType == .watch {
@@ -80,7 +79,7 @@ public struct ToiletCheckInButtonView: View {
     private func save(type: ToiletType) {
         let item = ToiletResultItem(toiletType: type, date: Date(), deviceType: deviceType)
 
-        SharedDefaultsManager.add(item: item)
+        SharedDefaults.add(item: item)
     }
 }
 

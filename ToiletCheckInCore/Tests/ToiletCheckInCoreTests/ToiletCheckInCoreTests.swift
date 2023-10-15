@@ -49,9 +49,9 @@ actor ToiletCheckInCoreLogicTests {
 
         let date = Date()
         let date1 = date.setTime(hour: 5, minute: 0, second: 0)!
-        let item1 = ToiletResultItem(toiletType: .big, date: date1, deviceType: .phone)
+        let item1 = ToiletResultItem(toiletType: .big(type: .default), date: date1, deviceType: .phone)
         let date2 = date.setTime(hour: startingHour, minute: 0, second: 0)!
-        let item2 = ToiletResultItem(toiletType: .big, date: date2, deviceType: .watch)
+        let item2 = ToiletResultItem(toiletType: .big(type: .default), date: date2, deviceType: .watch)
         let date3 = date.setTime(hour: 12, minute: 0, second: 0)!
         let item3 = ToiletResultItem(toiletType: .small, date: date3, deviceType: .widget)
         let date4 = date.setTime(hour: 15, minute: 0, second: 0)!.offsetDays(offset: -1)!
@@ -70,12 +70,12 @@ actor ToiletCheckInCoreLogicTests {
         
         // must be item2 & item3
         #expect(results[0].items.count == 2)
-        #expect(results[0].items[0].toiletType == .big && results[0].items[0].deviceType == .watch)
+        #expect(results[0].items[0].toiletType == .big(type: .default) && results[0].items[0].deviceType == .watch)
         #expect(results[0].items[1].toiletType == .small && results[0].items[1].deviceType == .widget)
 
         // must be item1 & item4
         #expect(results[1].items.count == 2)
         #expect(results[1].items[0].toiletType == .small && results[1].items[0].deviceType == .phone)
-        #expect(results[1].items[1].toiletType == .big && results[1].items[1].deviceType == .phone)
+        #expect(results[1].items[1].toiletType == .big(type: .default) && results[1].items[1].deviceType == .phone)
     }
 }

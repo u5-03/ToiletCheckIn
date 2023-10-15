@@ -8,5 +8,4 @@
 import Foundation
 
 public enum Constants {
-    public static let startingHour = 6
 }

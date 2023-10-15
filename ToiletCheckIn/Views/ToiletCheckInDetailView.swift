@@ -31,17 +31,21 @@ struct ToiletCheckInDetailView: View {
                         .multilineTextAlignment(.leading)
                         .font(.system(type: appState.fontSizeType))
                         .foregroundStyle(Color(uiColor: .secondaryLabel))
+                        .minimumScaleFactor(0.1)
                 })
             }
         }
-        .navigationTitle("\(result.displayDateString)のトイレの記録")
+        .navigationTitle("\(result.displayDateString)の記録")
     }
 }
 
 #Preview {
-    ToiletCheckInDetailView(result: .init(items: [
-        .init(toiletType: .big, date: Date(), deviceType: .phone),
-        .init(toiletType: .small, date: Date().offsetHours(offset: -3)!, deviceType: .widget),
-    ]))
-        .environment(AppState())
+    NavigationStack {
+        ToiletCheckInDetailView(result: .init(items: [
+            .init(toiletType: .big(type: .default), date: Date().offsetDays(offset: -3)!, deviceType: .phone),
+            .init(toiletType: .small, date: Date().offsetDays(offset: -3)!, deviceType: .widget),
+            .init(toiletType: .small, date: Date().offsetDays(offset: -3)!, deviceType: .watch),
+        ]))
+            .environment(AppState())
+    }
 }

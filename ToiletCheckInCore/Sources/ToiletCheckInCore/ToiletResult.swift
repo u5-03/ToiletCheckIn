@@ -17,18 +17,59 @@ public enum DeviceType: String, Codable, CaseIterable, Identifiable {
     }
 }
 
-public enum ToiletType: String, Codable, CaseIterable, Identifiable {
-    case big
-    case small
+public enum ToiletType: Codable, Identifiable, Equatable {
+    public enum ToiletBigType: String, Codable, CaseIterable, Identifiable {
+        case hard = "硬め"
+        case soft = "軟かめ"
+        case liquid = "下痢"
+        public static let `default` = ToiletType.ToiletBigType.hard
 
-    public var id: String {
-        return rawValue
+        public var id: String {
+            return rawValue
+        }
     }
+
+    case big(type: ToiletBigType)
+    case small
 
     public var displayText: String {
         switch self {
+        case .big(let type):
+            return "\(displayIconString)(\(type.rawValue))"
+        case .small:
+            return displayIconString
+        }
+    }
+
+    public var displayIconString: String {
+        switch self {
         case .big: return "💩"
         case .small: return "💦"
+        }
+    }
+
+    public var isBig: Bool {
+        switch self {
+        case .big: return true
+        case .small: return false
+        }
+    }
+
+    public var id: String {
+        switch self {
+        case .big(let type):
+            type.id
+        case .small:
+            displayIconString
+        }
+    }
+
+    public func bigTypeChanged(type: ToiletBigType) -> ToiletType {
+        switch self {
+        case .big:
+            return .big(type: type)
+        case .small:
+            return self
         }
     }
 }
@@ -39,8 +80,8 @@ public struct ToiletResultItem: Codable, Identifiable, Equatable {
     public let date: Date
     public let deviceType: DeviceType
 
-    public init(toiletType: ToiletType, date: Date, deviceType: DeviceType) {
-        id = UUID().uuidString
+    public init(id: String? = nil, toiletType: ToiletType, date: Date, deviceType: DeviceType) {
+        self.id = id ?? UUID().uuidString
         self.toiletType = toiletType
         self.date = date
         self.deviceType = deviceType
@@ -104,8 +145,16 @@ public struct ToiletResult: Codable, Identifiable, Equatable {
 
     public var sectionDisplayValue: String {
         let smallCount = items.filter({ $0.toiletType == .small }).count
-        let bigCount = items.filter({ $0.toiletType == .big }).count
-        return "\(ToiletType.small.displayText): \(smallCount)回, \(ToiletType.big.displayText): \(bigCount)回"
+        let bigCount = items.filter({ $0.toiletType.isBig }).count
+        return "\(ToiletType.small.displayIconString): \(smallCount)回, \(ToiletType.big(type: .hard).displayIconString): \(bigCount)回"
+    }
+
+    public var sectionDisplayValueWithTimeRange: String {
+        let smallCount = items.filter({ $0.toiletType == .small }).count
+        let bigCount = items.filter({ $0.toiletType.isBig }).count
+        let firstItemDateAdjusted = firstItemDate.setTime(hour: SharedDefaults.startDayTime, minute: 0, second: 0)!
+        let recordTimeRange = "\(firstItemDateAdjusted.asString(withFormat: .timeHourNoZero))~\(firstItemDateAdjusted.offsetDays(offset: 1)!.offsetSeconds(offset: -1)!.asString(withFormat: .timeHourNoZero))"
+        return "\(ToiletType.small.displayIconString): \(smallCount)回, \(ToiletType.big(type: .hard).displayIconString): \(bigCount)回(\(recordTimeRange))"
     }
 
     public init(items: [ToiletResultItem]) {

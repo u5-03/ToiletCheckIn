@@ -7,6 +7,7 @@
 
 
 import Foundation
+import ToiletCheckInCore
 
 enum UserDefaultsKey: String {
     case fontSizeType

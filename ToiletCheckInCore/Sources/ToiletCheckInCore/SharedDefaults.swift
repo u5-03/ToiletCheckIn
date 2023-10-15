@@ -7,14 +7,47 @@
 
 import Foundation
 
-public enum SharedDefaultsManager {
+public enum SharedDefaults {
+    enum Keys: String {
+        case jsonKey = "toiletChechInKey"
+        case selectedBigType
+        case startDayTime
+        case shouldShowCheckmark
+    }
     // Ref: https://developer.apple.com/forums/thread/51348?page=2#:~:text=Replies-,Hi%2C%20everyone!,-I%20have%20also
 //    public static let groupId = "669226BDWM.group.yugo.sugiyama.toiletChechIn"
     public static let groupId = "group.yugo.sugiyama.toiletCheckIn"
-//    private static let sharedDefaults = UserDefaults(suiteName: SharedDefaultsManager.groupId)
+    private static let sharedDefaults = UserDefaults(suiteName: Self.groupId)
     //    private static let sharedDefaults = UserDefaults(suiteName: "group.toiletChechIn.yugo.sugiyama")
-    public static let key = "toiletChechInKey"
+
     private static let fileName = "data.json"
+
+    public static var selectedBigType: ToiletType.ToiletBigType {
+        get {
+            guard let string = sharedDefaults?.string(forKey: Keys.selectedBigType.rawValue),
+                  let type = ToiletType.ToiletBigType(rawValue: string) else { return .default }
+            return type
+        }
+        set {
+            sharedDefaults?.set(newValue.rawValue, forKey: Keys.selectedBigType.rawValue)
+        }
+    }
+    public static var startDayTime: Int {
+        get {
+            return sharedDefaults?.integer(forKey: Keys.startDayTime.rawValue) ?? 0
+        }
+        set {
+            sharedDefaults?.set(newValue, forKey: Keys.startDayTime.rawValue)
+        }
+    }
+    public static var shouldShowCheckmark: Bool {
+        get {
+            return sharedDefaults?.bool(forKey: Keys.shouldShowCheckmark.rawValue) ?? false
+        }
+        set {
+            sharedDefaults?.set(newValue, forKey: Keys.shouldShowCheckmark.rawValue)
+        }
+    }
 
     public static var toiletResults: [ToiletResultItem] {
         get {
@@ -85,14 +118,19 @@ public enum SharedDefaultsManager {
     }
 
     public static func add(item: ToiletResultItem) {
-        var results = SharedDefaultsManager.toiletResults
+        var results = SharedDefaults.toiletResults
         results.append(item)
-        SharedDefaultsManager.toiletResults = results
+        SharedDefaults.toiletResults = results
     }
 
     public static func remove(item: ToiletResultItem) {
-        var results = SharedDefaultsManager.toiletResults
+        var results = SharedDefaults.toiletResults
         results.removeAll(where: { $0.id == item.id })
-        SharedDefaultsManager.toiletResults = results
+        SharedDefaults.toiletResults = results
+    }
+
+    public static func update(item: ToiletResultItem) {
+        remove(item: item)
+        add(item: item)
     }
 }

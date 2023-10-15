@@ -20,18 +20,20 @@ struct ToiletAddView: View {
                     selectedToiletType = type
                 }
                 DatePicker(selection: $selectedDate,
-                           in: ...Date(),
+                           in: ...Date().offsetHours(offset: 1)!,
                            displayedComponents: [.date, .hourAndMinute]) {
                     Text("日付")
+                        .font(.title)
                 }
                 Button(action: {
-                    guard let type = selectedToiletType else { return }
+                    guard let type = selectedToiletType?.bigTypeChanged(type: SharedDefaults.selectedBigType) else { return }
                     let item = ToiletResultItem(toiletType: type, date: selectedDate, deviceType: .phone)
-                    SharedDefaultsManager.add(item: item)
+                    SharedDefaults.add(item: item)
                     dismiss()
                 }, label: {
                     Text("追加")
                         .fontWeight(.bold)
+                        .font(.body)
                         .padding(.horizontal, 16)
                         .padding(.vertical, 12)
                         .frame(maxWidth: .infinity)

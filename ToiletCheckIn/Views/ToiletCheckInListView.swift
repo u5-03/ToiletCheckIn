@@ -17,7 +17,7 @@ struct ToiletCheckInListView: View {
     private let buttonSizeHeight: CGFloat = 60
     private let buttonBottomMargin: CGFloat = 20
     private var results: [ToiletResult] {
-        resultItems.asToiletResultConverted(startingHour: Constants.startingHour)
+        resultItems.asToiletResultConverted(startingHour: SharedDefaults.startDayTime)
     }
 
 
@@ -35,13 +35,14 @@ struct ToiletCheckInListView: View {
                     refreshResults()
                 }
             })
-            .onChange(of: scenePhase) { _, newValue in
-                if newValue == .inactive {
-                    print("Inactive")
-                } else if newValue == .active {
+            .onChange(of: shouldShowSettingView, { _, newValue in
+                if !newValue {
                     refreshResults()
-                } else if newValue == .background {
-                    print("Background")
+                }
+            })
+            .onChange(of: scenePhase) { _, newValue in
+                if newValue == .active {
+                    refreshResults()
                 }
             }
             .sheet(isPresented: $shouldShowSettingView) {
@@ -95,6 +96,11 @@ private extension ToiletCheckInListView {
                                         Text(item.toiletType.displayText)
                                             .font(.system(type: appState.fontSizeType))
                                     }
+                                    .contextMenu {
+                                        if case .big(let type) = item.toiletType {
+                                            itemContextMenuView(toiletBigType: type, item: item)
+                                        }
+                                    }
                                 }
                                 .onDelete { indexSet in
                                     delete(at: indexSet, result: result)
@@ -104,7 +110,7 @@ private extension ToiletCheckInListView {
                                     ToiletCheckInDetailView(result: result)
                                 } label: {
                                     HStack {
-                                        Text("\(result.displayDateString)\n\(result.sectionDisplayValue)")
+                                        Text("\(result.displayDateString)\n\(result.sectionDisplayValueWithTimeRange)")
                                         // Ref: https://stackoverflow.com/a/71914266
                                             .multilineTextAlignment(.leading)
                                             .font(.system(type: appState.fontSizeType))
@@ -130,12 +136,31 @@ private extension ToiletCheckInListView {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
+
+    func itemContextMenuView(toiletBigType: ToiletType.ToiletBigType, item: ToiletResultItem) -> some View {
+        let leftToiletBigTypes = ToiletType.ToiletBigType.allCases.filter({ $0 != toiletBigType })
+
+        return ForEach(leftToiletBigTypes, id: \.self) { type in
+            Button(action: {
+                let newItem = ToiletResultItem(
+                    id: item.id,
+                    toiletType: .big(type: type),
+                    date: item.date,
+                    deviceType: item.deviceType
+                )
+                SharedDefaults.update(item: newItem)
+                refreshResults()
+            }) {
+                Text("\(type.rawValue)へ変更")
+            }
+        }
+    }
 }
 
 private extension ToiletCheckInListView {
     func refreshResults() {
         withAnimation {
-            resultItems = SharedDefaultsManager.toiletResults
+            resultItems = SharedDefaults.toiletResults
         }
     }
 
@@ -143,7 +168,7 @@ private extension ToiletCheckInListView {
         withAnimation {
             offsets.forEach { index in
                 let item = result.items[index]
-                SharedDefaultsManager.remove(item: item)
+                SharedDefaults.remove(item: item)
             }
         } completion: {
             refreshResults()
